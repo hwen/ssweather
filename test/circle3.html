@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+.gradient-box{
+    margin: auto;
+    width: 150px;
+    height: 150px;
+    border-radius:75px;
+    background: #131313;
+    border: 10px solid green;
+    -moz-border-image: -moz-linear-gradient(right, #FC913A 0%, #FF4E50 100%);
+    -webkit-border-image: -webkit-linear-gradient(right, #FC913A 0%, #FF4E50 100%);
+    border-image: linear-gradient(to left, #FC913A 0%, #FF4E50 100%);
+    border-image-slice: 1;
+ }
+</style>
+</head>
+<body>
+<div class="gradient-box"></div>
+</body>
+</html>
