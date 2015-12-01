@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+	.content-box {
+		width:500px;
+		height:550px;
+		position:relative;
+	}
+
+	.right {
+		position:absolute;
+		z-index:-10;
+		right:0;
+
+		display:inline-block;
+		height:500px;
+		width:250px;
+		border-radius:0 500px 500px 0;
+		background:linear-gradient(yellowgreen,yellow);
+		margin:auto 0;
+	}
+
+	.left {
+		position:absolute;
+		z-index:-10;
+		left:0;
+
+		display:inline-block;
+		height:500px;
+		width:255px;
+		border-radius:500px 0 0 500px;
+		background:linear-gradient(#8a2be2,red);
+	}
+
+	.leftRotate {
+		height:500px;
+		width:250px;
+		background-color:white;
+		float:left;
+		z-index:-5;
+	}
+
+	.rightRotate {
+		height:500px;
+		width:250px;
+		background-color:white;
+		float:right;
+		z-index:-10;
+
+		transform: rotate(3deg);
+	}
+
+	.content-degree {
+		position:absolute;
+		width:450px;
+		height:450px;
+		border-radius:50%;
+		background:grey;
+
+		top:25px;
+		left:25px;
+	}
+
+
+</style>	
+</head>
+<body>
+<div class="content-box">
+	<div class="content-degree">
+		<div class="text"></div>
+	</div>
+	<div class="left"></div>
+	<div class="right"></div>
+	<div class="leftRotate"></div>
+	<div class="rightRotate"></div>
+</div>	
+</body>
+</html>
