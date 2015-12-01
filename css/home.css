@@ -6,7 +6,7 @@ html,body {
 /********* header *********/
 
 .header {
-	margin:1rem;
+	padding: 1rem;
 	color: #777873;
 }
 
@@ -52,6 +52,8 @@ html,body {
 	width: 2.1rem;
 }
 
+/************ location ***************/
+
 .contact-bar {
 	height: 1.2rem;
 	width: 70%;
@@ -83,3 +85,33 @@ html,body {
 	float: right;
 	margin-right: .5rem;
 }
+
+.askLocation ul {
+	/*background: linear-gradient(#B6B8AA, #9D975F); */
+	list-style: none;
+	font-weight: bold;
+	width:70%;
+	font-size: 1.2rem;
+	padding:0;
+	margin:.3rem auto;
+}
+
+.askLocation ul li {
+	height: 1.8rem;
+	margin-top: 5px;
+	text-align: center;
+	line-height: 1.8rem;
+	background: #9D975F;
+}
+
+.askLocation ul .where {
+	border:none;
+	height: 1.8rem;
+	width: 100%;
+	background-color: #8B9166;
+	font-size: 1.2rem;
+
+	text-align: center;
+	font-weight: bold;
+}
+

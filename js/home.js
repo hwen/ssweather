@@ -1,24 +1,35 @@
-// 检测DOM有没加载完
-var checkLoad = function(callback) {
-	var browser = window.navigator.userAgent;
-	var isIE = false;
-	if (/msie/.test(browser.toLowerCase())) {
-		isIE = true;
-	}
+checkLoad(function() {
 
-	if (isIE) {
-		document.onreadystatechange = function() {
-			if (document.readyState == 'complete' || document.readyState == 'loaded') {
-				callback.call();
+	(function() {
+		var location = document.querySelector('.location');
+
+		var slideAnimate = function(isUp) {
+			var bar  = document.querySelector('.contact-bar');
+			var ask  = document.querySelector('.askLocation');			
+			if (isUp) {
+
+			} else {
+
 			}
 		};
-	} else {
-		if (document.addEventListener) {
-			document.addEventListener('DOMContentLoaded', callback, false);
-		}
-	}
-}
 
-checkLoad(function() {
+		var showAsk = function() {
+			var bar  = document.querySelector('.contact-bar');
+			var ask  = document.querySelector('.askLocation');					
+			if (bar.style.display === 'none')  {
+				bar.style.display = '';
+				ask.style.display = 'none';
+			} else {
+				bar.style.display = 'none';
+				ask.style.display = '';
+			}
+		};
+
+		var askLocation = function() {
+			
+		};
+
+		EventUtil.addHandler(location, 'click' , showAsk);
+	})();
 
 });
