@@ -10,6 +10,17 @@
 		position:relative;
 	}
 
+	.wrapper {
+		width:250px;
+		height:500px;
+		position:absolute;
+		top:0;
+		overflow:hidden;
+	}
+
+	.w-left { left:0;}
+	.w-right {right:0;}
+
 	.right {
 		position:absolute;
 		z-index:-10;
@@ -35,22 +46,28 @@
 		background:linear-gradient(#8a2be2,red);
 	}
 
+	.rotate {
+		height:445px;
+		width:445px;
+		border:28px solid transparent;
+		border-radius:50%;
+		position:absolute;
+		top:0;
+		transform: rotate(45deg);
+	}
+
 	.leftRotate {
-		height:500px;
-		width:250px;
-		background-color:white;
-		float:left;
-		z-index:-5;
+		border-bottom:28px solid green;
+		border-left:28px solid green;
+		left:0;
+		transform: rotate(45deg);
 	}
 
 	.rightRotate {
-		height:500px;
-		width:250px;
-		background-color:white;
-		float:right;
-		z-index:-10;
-
-		transform: rotate(3deg);
+		border-top:28px solid green;
+		border-right:28px solid green;
+		right:0;
+		transform: rotate(45deg);
 	}
 
 	.content-degree {
@@ -64,7 +81,6 @@
 		left:25px;
 	}
 
-
 </style>	
 </head>
 <body>
@@ -74,8 +90,12 @@
 	</div>
 	<div class="left"></div>
 	<div class="right"></div>
-	<div class="leftRotate"></div>
-	<div class="rightRotate"></div>
+	<div class="wrapper w-left">
+		<div class="rotate leftRotate"></div>
+	</div>
+	<div class="wrapper w-right">
+		<div class="rotate rightRotate"></div>
+	</div>
 </div>	
 </body>
 </html>
