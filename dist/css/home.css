@@ -40,7 +40,9 @@ html, body {
     width: 95%;
     font-size: 2rem; }
   .header .refresh {
-    float: right; }
+    float: right;
+    height: 3.96rem;
+    line-height: 3.96rem; }
     .header .refresh .icon {
       height: 2rem;
       width: 2.1rem; }
@@ -88,6 +90,7 @@ html, body {
       height: 1.8rem;
       width: 100%;
       background-color: #8B9166;
+      color: #A6A7A3;
       font-size: 1.2rem;
       text-align: center;
       font-weight: bold; }

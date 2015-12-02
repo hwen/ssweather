@@ -1,9 +1,10 @@
 /********control*********/
-$fontFamily:Roboto,Tahoma,Arial,"Droid Sans","Helvetica Neue","Droid Sans Fallback","Heiti SC",sans-self;
+$fontFamily:'Microsoft YaHei' ,"Droid Sans","Helvetica Neue","Droid Sans Fallback","Heiti SC",sans-self;
 body {
   margin:0;
   padding:0;
   overflow: hidden;
+  font-family: $fontFamily;
 }
 
 a {
