@@ -1,0 +1,1 @@
+checkLoad(function(){!function(){var e=document.querySelector(".location"),n=function(){var e=document.querySelector(".contact-bar"),n=document.querySelector(".askLocation");"none"===e.style.display?(e.style.display="",n.style.display="none"):(e.style.display="none",n.style.display="")};EventUtil.addHandler(e,"click",n)}()});
