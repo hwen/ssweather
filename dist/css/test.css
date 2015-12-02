@@ -1,0 +1,93 @@
+html, body {
+  font: 100% Helvetica, sans-serif;
+  color: #333; }
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+nav li {
+  display: inline-block; }
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none; }
+nav div {
+  display: block; }
+
+.box {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px; }
+
+.message, .success, .error, .warning {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333; }
+
+.success {
+  border-color: green; }
+
+.error {
+  padding: 20px;
+  border-color: red; }
+
+.warning {
+  border-color: yellow; }
+
+.container {
+  width: 100%; }
+
+article[role='main'] {
+  float: left;
+  width: 31.25%; }
+
+/****** ss *******/
+p {
+  border: 1px solid red;
+  background-color: #fff; }
+
+.content-box .border-1 {
+  border: 1px solid blue; }
+.content-box .border-2 {
+  border: 2px solid blue; }
+.content-box .border-3 {
+  border: 3px solid blue; }
+.content-box .border-4 {
+  border: 4px solid blue; }
+.content-box .border-5 {
+  border: 5px solid blue; }
+.content-box .border-6 {
+  border: 6px solid blue; }
+.content-box .border-7 {
+  border: 7px solid blue; }
+.content-box .border-8 {
+  border: 8px solid blue; }
+.content-box .border-9 {
+  border: 9px solid blue; }
+
+.item-6 {
+  width: 12em; }
+
+.item-4 {
+  width: 8em; }
+
+.item-2 {
+  width: 4em; }
+
+.a {
+  background-image: url("/image/a.jpg"); }
+
+.b {
+  background-image: url("/image/b.jpg"); }
+
+.c {
+  background-image: url("/image/c.jpg"); }
+
+.d {
+  background-image: url("/image/d.jpg"); }
+
+/*******function*******/
+#sidebar {
+  width: 10px; }
