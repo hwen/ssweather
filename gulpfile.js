@@ -1,17 +1,18 @@
-var gulp = require('gulp');
-var uglify = require('gulp-uglify');
-var sass = require('gulp-ruby-sass');
+var gulp = require('gulp'),
+	uglify = require('gulp-uglify'),
+	sass = require('gulp-ruby-sass'),
+	autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('script', function() {
 	gulp.src('js/*.js')
 		.pipe(uglify())
-		.pipe(gulp.dest('dist/js'))
+		.pipe(gulp.dest('dist/js'));
 });
 
 gulp.task('sass', function() {
-	return sass('sass/')
+	return sass('sass/*.scss')
 	.on('error', function(err) {
-		console.error('Error!', err.message);
+		console.error('sassError!', err.message);
 	})
 	.pipe(gulp.dest('dist/css'));
 });
@@ -21,4 +22,4 @@ gulp.task('auto', function() {
 	gulp.watch('sass/**/*.scss', ['sass']);
 });
 
-gulp.task('default', ['script', 'sass', 'auto']);
+gulp.task('default', ['sass', 'script', 'auto']);
