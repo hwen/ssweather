@@ -6,6 +6,9 @@ html, body {
 .header {
   padding: 1rem;
   color: #777873;
+  position: fixed;
+  width: 92%;
+  top: 0;
   /***********location***********/ }
   .header .day {
     height: 3.96rem;
@@ -96,6 +99,9 @@ html, body {
       font-weight: bold; }
 
 /***********data box****************/
+.content-container {
+  padding-top: 17rem; }
+
 .data-container {
   width: 16rem;
   height: 16rem;
@@ -108,7 +114,7 @@ html, body {
   -webkit-box-shadow: 5px 5px 5px #7d767d;
   -moz-box-shadow: 5px 5px 5px #7d767d;
   box-shadow: 5px 5px 5px #7d767d;
-  margin: 10rem auto 0; }
+  margin: 0 auto; }
 
 .data-box {
   width: 14rem;
