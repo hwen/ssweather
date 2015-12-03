@@ -10,8 +10,8 @@
 	<script src="../dist/js/util.js"></script>
 	<script src="../dist/js/angular.js"></script>
 </head>
-<body>
-<div class="header">
+<body ng-app="ssweather">
+<div class="header" ng-controller="locationController as location">
 	<div class="day">
 		<div class="day-content">
 			TODAY
@@ -22,10 +22,10 @@
 	</div>
 	<div class="askLocation" style="display:none;">
 		<ul>
-		<input class="where" type="text" placeholder='输入地址'>
-			<li>ll</li>
-			<li>ll</li>
-			<li>ii</li>
+		<input class="where" type="text" placeholder='输入地址' ng-model="location.where">
+			<li style="display:{{location.tips[0]}}"></li>
+			<li></li>
+			<li></li>
 		</ul>		
 	</div>
 	<div class="location">
@@ -73,5 +73,6 @@
 </div>
 
 </body>
-<script src='../js/home.js'></script>
+<script src="../dist/js/weather.js"></script>
+<script src='../dist/js/home.js'></script>
 </html>

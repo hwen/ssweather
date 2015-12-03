@@ -1,0 +1,1 @@
+var weather=angular.module("ssweather",[]);weather.controller("locationController",function(){var e=this;e.tips=[],function(){var t=document.querySelector(".where");EventUtil.addHandler(t,"input",function(){for(var t=new RegExp("^"+e.where+".*$","im"),r=0,n=0;n<citys.length&&!(r>2);n++)t.test(citys[n][0])&&(e.tips.push(citys[n][0]),r++)})}()});

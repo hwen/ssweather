@@ -15,15 +15,6 @@ checkLoad(function() {
 			}
 		};
 
-		var askLocation = function() {
-			var where = document.querySelector('.where');
-			EventUtil.addHandler(where, 'input', function() {
-				console.log(where.value);
-			});
-		};
-
-		askLocation();
-
 		EventUtil.addHandler(location, 'click' , showAsk);
 	})();
 
