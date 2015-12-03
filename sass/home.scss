@@ -272,3 +272,45 @@ html, body {
     background:linear-gradient(#e23ab2, #ff4a2d);
   }
 }
+
+/************ sticker **************/
+.sticker-container {
+
+  .sticker {
+    position:relative;
+    width:1rem;
+    height: 20rem;
+    margin:0 auto;
+    background:linear-gradient(#e5e2d9,#BEBFB9);
+
+    .highlighter {
+      position: absolute;
+      top: 2rem;
+      right:-.25rem;
+      width:1.5rem;
+      height: 8rem;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      border-radius: 20px;
+      background:linear-gradient(yellowgreen, #ffc215);
+    }
+  }
+
+  .highlight-box {
+    color:white;
+    text-align: right;
+    position: relative;
+    top: -18rem;
+    right:60%;
+
+    .highlight-time {
+      border-bottom: 1px solid #BEBFB9;
+      display:inline-block;
+      width: 9rem;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+  }
+}
