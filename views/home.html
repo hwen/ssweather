@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="../dist/css/home.css">
 	<script src="../dist/js/util.js"></script>
 	<script src="../dist/js/angular.js"></script>
+	<script src="../dist/js/city.js"></script>
 </head>
 <body ng-app="ssweather">
 <div class="header" ng-controller="locationController as location">
@@ -22,10 +23,7 @@
 	</div>
 	<div class="askLocation" style="display:none;">
 		<ul>
-		<input class="where" type="text" placeholder='输入地址' ng-model="location.where">
-			<li style="display:{{location.tips[0]}}"></li>
-			<li></li>
-			<li></li>
+		<input class="where" type="text" placeholder='输入地址'>
 		</ul>		
 	</div>
 	<div class="location">
