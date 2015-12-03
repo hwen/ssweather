@@ -3,16 +3,6 @@ checkLoad(function() {
 	(function() {
 		var location = document.querySelector('.location');
 
-		var slideAnimate = function(isUp) {
-			var bar  = document.querySelector('.contact-bar');
-			var ask  = document.querySelector('.askLocation');			
-			if (isUp) {
-
-			} else {
-
-			}
-		};
-
 		var showAsk = function() {
 			var bar  = document.querySelector('.contact-bar');
 			var ask  = document.querySelector('.askLocation');					
@@ -26,8 +16,13 @@ checkLoad(function() {
 		};
 
 		var askLocation = function() {
-			
+			var where = document.querySelector('.where');
+			EventUtil.addHandler(where, 'input', function() {
+				console.log(where.value);
+			});
 		};
+
+		askLocation();
 
 		EventUtil.addHandler(location, 'click' , showAsk);
 	})();

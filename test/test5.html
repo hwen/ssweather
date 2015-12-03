@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--<script src="../dist/js/util.js"></script>-->
+    <script src="city.js"></script>
+</head>
+<body>
+<input id="what" class="area" type="text"/>
+</body>
+<script>
+    var html = document;
+    var source = cff;
+
+    var getArea = function() {
+        var text = document.querySelector('.area');
+        text.addEventListener('input', function() {
+
+            for (var i = 0; i < source.length; i++) {//国内城市匹配
+                var reg = new RegExp('^' + text.value + '.*$', 'im');
+                if(reg.test(source[i][0])) {
+                    console.log(source[i][0]);
+                }
+            }
+        });
+    };
+
+
+    getArea();
+</script>
+</html>
