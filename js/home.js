@@ -17,5 +17,4 @@ checkLoad(function() {
 
 		EventUtil.addHandler(location, 'click' , showAsk);
 	})();
-
 });

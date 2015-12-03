@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Weather</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1,maxinum-scale=1">	
-	<meta name="viewport" content="width=360">
+	<!--<meta name="viewport" content="width=360">-->
 	<link rel="stylesheet" href="../dist/css/base.css">
 	<link rel="stylesheet" href="../dist/css/home.css">
 	<script src="../dist/js/util.js"></script>
@@ -13,7 +13,7 @@
 </head>
 <body ng-app="ssweather">
 <div class="header" ng-controller="locationController as location">
-	<div class="day">
+	<div class="day" onclick="getWeather()">
 		<div class="day-content">
 			TODAY
 			<span class='refresh'><img class="icon" src="../img/refresh.png" alt="刷新"></span>
@@ -22,8 +22,8 @@
 	<div class="contact-bar">
 	</div>
 	<div class="askLocation" style="display:none;">
-		<ul>
 		<input class="where" type="text" placeholder='输入地址'>
+		<ul class="for-location">
 		</ul>		
 	</div>
 	<div class="location">
