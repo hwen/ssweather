@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="ssweather">
 <head>
 	<meta charset="UTF-8">
 	<title>Weather</title>
@@ -11,9 +11,9 @@
 	<script src="../dist/js/angular.js"></script>
 	<script src="../dist/js/city.js"></script>
 </head>
-<body ng-app="ssweather">
-<div class="header" ng-controller="locationController as location">
-	<div class="day" onclick="getWeather()">
+<body ng-controller="weatherController">
+<div class="header">
+	<div class="day">
 		<div class="day-content">
 			TODAY
 			<span class='refresh'><img class="icon" src="../img/refresh.png" alt="刷新"></span>
@@ -27,8 +27,8 @@
 		</ul>		
 	</div>
 	<div class="location">
-		<span class="location-content">San Francisco</span>
-		<span class='degree'>30'C</span>
+		<span class="location-content">{{city}}</span>
+		<span class='degree'>{{temperature}}&#176;C</span>
 	</div>
 </div>
 
