@@ -21,6 +21,18 @@ weather.controller('weatherController',["$scope","$http", function($scope, $http
         });
     };
 
+    $scope.hideAsk = function() {
+        var bar  = document.querySelector('.contact-bar');
+        var ask  = document.querySelector('.askLocation');
+        var ul = document.querySelector('.for-location');
+        var where = document.querySelector('.where');
+        bar.style.display = '';
+        ask.style.display = 'none';
+        ul.innerHTML = '';
+        where.value = '';
+    };
+
+    //ask city
     (function() {
         var where = document.querySelector('.where');
         var ul = document.querySelector('.for-location');
@@ -49,6 +61,7 @@ weather.controller('weatherController',["$scope","$http", function($scope, $http
                 EventUtil.addHandler(li, 'click', function(e) {
                     //console.log(e.target.innerHTML);
                     $scope.getWeatherNow(e.target.innerHTML);
+                    $scope.hideAsk();
                 });
                 ul.appendChild(li);
             }
