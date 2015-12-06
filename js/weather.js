@@ -11,11 +11,12 @@ weather.controller('weatherController',["$scope","$http", function($scope, $http
         api += city;
         $scope.city = city;
         $http({
-            method: 'JSONP',
+            method: 'GET',
             url: api
         }).then(function success(response) {
-            console.log(response);
-            $scope.temperature = data.now.temperature;
+            var data = response.data.weather;
+            console.log(data[0].now.temperature);
+            $scope.temperature = data[0].now.temperature;
         }, function error(response) {
             console.log('get weather now error:'+response);
         });
