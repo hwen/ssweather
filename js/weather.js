@@ -1,6 +1,5 @@
 var weather = angular.module('ssweather', []);
 
-
 weather.controller('weatherController',["$scope","$http", function($scope, $http) {
     $scope.tips = [];
     $scope.city = '上海';
