@@ -4,6 +4,20 @@ weather.controller('weatherController',["$scope","$http", function($scope, $http
     $scope.tips = [];
     $scope.city = '上海';
     $scope.temperature = '12';
+    $scope.humidity = 35;
+
+    $scope.setHumidity = function(h) {
+        var rPercent = document.querySelector('.rightRotate'),
+            lPercent = document.querySelector('.leftRotate');
+        if (h<50) {
+            console.log('h:'+ h);
+            rPercent.style.transform = 'rotate(' + (3.6*h+45) + 'deg)';
+        } else {
+            console.log('h:'+ h);
+            rPercent.style.transform = 'rotate(225deg)'
+            lPercent.style.transform = 'rotate(' + (3.6*(h-50)+45) + 'deg)';
+        }
+    };
     
     $scope.getWeatherNow = function(city) {
         var api = 'https://api.thinkpage.cn/v2/weather/now.json?language=zh-chs&unit=c&key=STUQDFMKSP&city=';
@@ -16,6 +30,8 @@ weather.controller('weatherController',["$scope","$http", function($scope, $http
             var data = response.data.weather;
             console.log(data[0].now.temperature);
             $scope.temperature = data[0].now.temperature;
+            $scope.humidity = data[0].now.humidity;
+            $scope.setHumidity($scope.humidity);
         }, function error(response) {
             console.log('get weather now error:'+response);
         });
