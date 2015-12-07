@@ -36,10 +36,6 @@ html, body {
     line-height: 3.96rem;
     text-align: left;
     padding-left: 2rem; }
-    .header .day:active {
-      -webkit-box-shadow: inset 2px 2px 1px #72896F;
-      -moz-box-shadow: inset 2px 2px 1px #72896F;
-      box-shadow: inset 2px 2px 1px #72896F; }
   .header .day-content {
     width: 95%;
     font-size: 2rem; }
@@ -123,19 +119,19 @@ html, body {
   width: 14rem;
   height: 14rem;
   position: absolute;
-  top: .8rem;
+  top: 1rem;
   right: 1rem; }
   .data-box .data-text {
     position: absolute;
     width: 12rem;
-    height: 12.1rem;
+    height: 12rem;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
     color: #777873;
     background: linear-gradient(#e5e2d9, #BEBFB9);
     text-align: center;
-    top: 1.1rem;
+    top: 1rem;
     left: 1rem;
     z-index: 2; }
     .data-box .data-text .inside-text {
@@ -146,8 +142,8 @@ html, body {
       -moz-border-radius: 50%;
       border-radius: 50%;
       border: 3px solid #a2a39e;
-      top: .85rem;
-      right: .76rem;
+      top: .79rem;
+      right: .77rem;
       font-size: 1rem;
       background: linear-gradient(#e5e2d9, #BEBFB9);
       -webkit-box-shadow: inset 0px 2px 2px 0px rgba(140, 140, 140, 0.75);
@@ -166,14 +162,14 @@ html, body {
         font-size: 1rem; }
   .data-box .wrapper {
     width: 7rem;
-    height: 14.4rem;
+    height: 14rem;
     position: absolute;
     overflow: hidden;
     z-index: 2; }
     .data-box .wrapper .rotate {
-      height: 12rem;
-      width: 12rem;
-      border: 1.2rem solid transparent;
+      height: 11.88rem;
+      width: 11.88rem;
+      border: 1.1rem solid transparent;
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
       border-radius: 50%;
@@ -185,15 +181,15 @@ html, body {
       -o-transform: rotate(45deg);
       transform: rotate(45deg); }
     .data-box .wrapper .leftRotate {
-      border-bottom: 1.2rem solid #808786;
-      border-left: 1.2rem solid #808786;
+      border-bottom: 1.1rem solid #808786;
+      border-left: 1.1rem solid #808786;
       left: 0;
       transform: rotate(45deg); }
     .data-box .wrapper .rightRotate {
-      border-top: 1.2rem solid #808786;
-      border-right: 1.2rem solid #808786;
+      border-top: 1.1rem solid #808786;
+      border-right: 1.1rem solid #808786;
       right: 0;
-      transform: rotate(145deg); }
+      transform: rotate(171deg); }
   .data-box .w-left {
     left: 0; }
   .data-box .w-right {

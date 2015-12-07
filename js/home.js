@@ -1,6 +1,31 @@
 checkLoad(function() {
 
 	(function() {
+		var dayText = document.querySelector('.day-text'),
+			refresh = document.querySelector('.refresh'),
+			day     = document.querySelector('.day');
+
+		var getFuture = function() {
+			day.style.boxShadow = 'inset 2px 2px 1px #72896F';
+			day.style.webkitBoxShadow = 'inset 2px 2px 1px #72896F';
+			day.style.mozBoxShadow = 'inset 2px 2px 1px #72896F';
+			setTimeout(function() {
+				day.style.boxShadow = '';
+				day.style.webkitBoxShadow = '';
+				day.style.mozBoxShadow = '';
+			}, 200);
+		};
+
+		var getRefresh = function() {
+
+		};
+
+		EventUtil.addHandler(dayText, 'click', getFuture);
+		EventUtil.addHandler(refresh, 'click', getRefresh);
+
+	})();
+
+	(function() {
 		var location = document.querySelector('.location');
 		var bar  = document.querySelector('.contact-bar');
 		var ask  = document.querySelector('.askLocation');
