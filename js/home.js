@@ -3,7 +3,8 @@ checkLoad(function() {
 	(function() {
 		var dayText = document.querySelector('.day-text'),
 			refresh = document.querySelector('.refresh'),
-			day     = document.querySelector('.day');
+			day     = document.querySelector('.day'),
+			future  = document.querySelector('.future-weather');
 
 		var getFuture = function() {
 			day.style.boxShadow = 'inset 2px 2px 1px #72896F';
@@ -14,6 +15,22 @@ checkLoad(function() {
 				day.style.webkitBoxShadow = '';
 				day.style.mozBoxShadow = '';
 			}, 200);
+
+			if(future.style.display === 'none') {
+				dayText.innerHTML = 'FUTURE';
+				day.style.borderRadius = '2rem 2rem 0 0';
+				day.style.webkitBorderRadius = '2rem 2rem 0 0';
+				day.style.mozBorderRadius = '2rem 2rem 0 0';
+				setTimeout(function(){
+					future.style.display = '';
+				}, 200);
+			} else {
+				dayText.innerHTML = 'TODAY';
+				future.style.display = 'none';
+				day.style.borderRadius = '2rem';
+				day.style.webkitBorderRadius = '2rem';
+				day.style.mozBorderRadius = '2rem';
+			}
 		};
 
 		var getRefresh = function() {

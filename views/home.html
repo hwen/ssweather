@@ -18,8 +18,31 @@
 			<span class="day-text" style="width:80%;display:inline-block;">TODAY</span>
 			<span class='refresh'><img class="icon" src="../img/refresh.png" alt="刷新"></span>
 		</div>
+		<div class="future-weather" style="display:none">
+			<div class="future-box">
+				<div class="col">
+					<span class="cd-1 future-day" ng-bind="day1"></span>
+					<span class="cd-1 future-day" ng-bind="day2"></span>
+				</div>
+				<div class="col col-img">
+					<span class="cd-1">
+						<img class="future-img f-img1" src="../img/weather/{{w1}}.png" alt=""/>
+					</span>
+					<span class="cd-1">
+						<img class="future-img f-img2" src="../img/weather/{{w2}}.png" alt=""/>
+					</span>
+				</div>
+				<div class="col">
+					<span class="cd-1 future-text" ng-bind="textDay1"></span>
+					<span class="cd-1 future-text" ng-bind="textDay2"></span>
+				</div>
+				<div class="col">
+					<label class="cd-1 f-weather" for=""><span ng-bind="low1"></span>~<span ng-bind="high1"></span>&#176;C</label>
+					<label class="cd-1 f-weather" for=""><span ng-bind="low2"></span>~<span ng-bind="high2"></span>&#176;C</label>
+				</div>
+			</div>
+		</div>
 	</div>
-	<div class="future-weather"></div>
 	<div class="contact-bar">
 	</div>
 	<div class="askLocation" style="display:none;">

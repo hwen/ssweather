@@ -6,6 +6,7 @@ weather.controller('weatherController',["$scope","$http", function($scope, $http
     $scope.temperature = '12';
     $scope.humidity = 35;
 
+
     $scope.setHumidity = function(h) {
         var rPercent = document.querySelector('.rightRotate'),
             lPercent = document.querySelector('.leftRotate');
@@ -34,6 +35,30 @@ weather.controller('weatherController',["$scope","$http", function($scope, $http
             $scope.setHumidity($scope.humidity);
         }, function error(response) {
             console.log('get weather now error:'+response);
+        });
+    };
+
+    var getWeatherFuture = function(city) {
+        var api = 'https://api.thinkpage.cn/v3/weather/daily.json?key=STUQDFMKSP&language=zh-Hans&unit=c&start=0&days=5';
+        api += '&location=' + city;
+        $http({
+            method: 'GET',
+            url: api
+        }).then(function success(response) {
+            var data = response.data.results[0].daily;
+            $scope.day1 = data[0].date.substr(5);
+            $scope.day2 = data[1].date.substr(5);
+            $scope.textDay1 = data[0].text_day;
+            $scope.textDay2 = data[1].text_day;
+            $scope.low1 = data[0].low;
+            $scope.low2 = data[1].low;
+            $scope.high1 = data[0].high;
+            $scope.high2 = data[1].high;
+            $scope.w1   = data[0].code_day;
+            $scope.w2   = data[1].code_day;
+        }, function error(response) {
+            console.log('get future weather error:');
+            console.log('city:'+ city + "-->" + response.data.status);
         });
     };
 
@@ -80,6 +105,19 @@ weather.controller('weatherController',["$scope","$http", function($scope, $http
                     $scope.hideAsk();
                 });
                 ul.appendChild(li);
+            }
+        });
+    })();
+
+    //future weather
+    (function() {
+        var dayText = document.querySelector('.day-text'),
+            refresh = document.querySelector('.refresh');
+
+        EventUtil.addHandler(dayText, 'click', function() {
+            var fw = document.querySelector('.future-weather');
+            if (fw.style.display === 'none') {
+                getWeatherFuture($scope.city);
             }
         });
     })();
