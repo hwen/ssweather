@@ -121,4 +121,17 @@ weather.controller('weatherController',["$scope","$http", function($scope, $http
             }
         });
     })();
+
+    //refresh
+    (function() {
+        var refresh = document.querySelector('.refresh').firstChild;
+        EventUtil.addHandler(refresh, 'click', function() {
+            var oldCls = refresh.className;
+            refresh.className += ' is-active';
+            setTimeout(function() {
+                refresh.className = oldCls;
+            }, 1000);
+            $scope.getWeatherNow($scope.city);
+        });
+    })();
 } ]);

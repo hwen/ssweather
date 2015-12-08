@@ -48,6 +48,43 @@ html, body {
       height: 2rem;
       width: 2.1rem;
     }
+
+    .is-active {
+      -webkit-animation-name: spin;
+      -moz-animation-name: spin;
+      -o-animation-name: spin;
+      animation-name: spin;
+      -webkit-animation-duration: 1s;
+      -moz-animation-duration: 1s;
+      -o-animation-duration: 1s;
+      animation-duration: 1s;
+    }
+
+    @keyframes spin {
+      0% {
+        -webkit-transform: rotateZ(0deg);
+        -moz-transform: rotateZ(0deg);
+        -o-transform: rotateZ(0deg);
+        -ms-transform: rotateZ(0deg);
+        transform: rotateZ(0deg);
+      }
+
+      50% {
+        -webkit-transform: rotateZ(360deg);
+        -moz-transform: rotateZ(360deg);
+        -o-transform: rotateZ(360deg);
+        -ms-transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
+      }
+
+      100% {
+        -webkit-transform: rotateZ(720deg);
+        -moz-transform: rotateZ(720deg);
+        -o-transform: rotateZ(720deg);
+        -ms-transform: rotateZ(720deg);
+        transform: rotateZ(720deg);
+      }
+    }
     
     &::before {
       content:' ';
