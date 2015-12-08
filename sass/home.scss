@@ -69,14 +69,6 @@ html, body {
         transform: rotateZ(0deg);
       }
 
-      50% {
-        -webkit-transform: rotateZ(360deg);
-        -moz-transform: rotateZ(360deg);
-        -o-transform: rotateZ(360deg);
-        -ms-transform: rotateZ(360deg);
-        transform: rotateZ(360deg);
-      }
-
       100% {
         -webkit-transform: rotateZ(720deg);
         -moz-transform: rotateZ(720deg);
