@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+	.content-box {
+		width:500px;
+		height:550px;
+		position:relative;
+	}
+
+	.wrapper {
+		width:250px;
+		height:506px;
+		position:absolute;
+		top:0;
+		overflow:hidden;
+	}
+
+	.w-left { left:0;}
+	.w-right {right:0;}
+
+	.right {
+		position:absolute;
+		z-index:-10;
+		right:0;
+
+		display:inline-block;
+		height:500px;
+		width:250px;
+		border-radius:0 500px 500px 0;
+		background:linear-gradient(yellowgreen,yellow);
+		margin:auto 0;
+	}
+
+	.left {
+		position:absolute;
+		z-index:-10;
+		left:0;
+
+		display:inline-block;
+		height:500px;
+		width:255px;
+		border-radius:500px 0 0 500px;
+		background:linear-gradient(#8a2be2,red);
+	}
+
+	.rotate {
+		height:445px;
+		width:445px;
+		border:28px solid transparent;
+		border-radius:50%;
+		position:absolute;
+		top:0;
+		transform: rotate(45deg);
+	}
+
+	.leftRotate {
+		border-bottom:28px solid green;
+		border-left:28px solid green;
+		left:0;
+		transform: rotate(45deg);
+	}
+
+	.rightRotate {
+		border-top:28px solid green;
+		border-right:28px solid green;
+		right:0;
+		transform: rotate(45deg);
+	}
+
+	.content-degree {
+		position:absolute;
+		width:450px;
+		height:450px;
+		border-radius:50%;
+		background:grey;
+
+		text-align:center;
+
+		top:25px;
+		left:25px;
+	}
+
+	.content-degree .text {
+		font-size:250px;
+		position:relative;
+		line-height:450px;
+		display:inline-block;
+	}
+
+	.content-degree .percent {
+		position:absolute;
+		top:0;
+		right:0;
+		font-size:30px;
+	}
+</style>	
+</head>
+<body>
+<div class="content-box">
+	<div class="content-degree">
+		<div class="text">50<sup class='percent'>%</sup></div> 
+		<div class="text-detail">1230/2000 pts</div>
+	</div>
+	<div class="left"></div>
+	<div class="right"></div>
+	<div class="wrapper w-left">
+		<div class="rotate leftRotate"></div>
+	</div>
+	<div class="wrapper w-right">
+		<div class="rotate rightRotate"></div>
+	</div>
+</div>	
+</body>
+</html>
