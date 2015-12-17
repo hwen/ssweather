@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ssweather">
+<head>
+	<meta charset="UTF-8">
+	<title>Weather</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maxinum-scale=1">	
+	<!--<meta name="viewport" content="width=360">-->
+	<link rel="stylesheet" href="dist/css/base.css">
+	<link rel="stylesheet" href="dist/css/home.css">
+	<script src="dist/js/util.js"></script>
+	<script src="dist/js/angular.js"></script>
+	<script src="dist/js/city.js"></script>
+</head>
+<body ng-controller="weatherController">
+<div class="header">
+	<div class="day">
+		<div class="day-content">
+			<span class="day-text" style="width:80%;display:inline-block;">TODAY</span>
+			<span class='refresh'><img class="icon" src="../img/refresh.png" alt="刷新"></span>
+		</div>
+		<div class="future-weather" style="display:none">
+			<div class="future-box">
+				<div class="col">
+					<span class="cd-1 future-day" ng-bind="day1"></span>
+					<span class="cd-1 future-day" ng-bind="day2"></span>
+				</div>
+				<div class="col col-img">
+					<span class="cd-1">
+						<img class="future-img f-img1" src="../img/weather/{{w1}}.png" alt=""/>
+					</span>
+					<span class="cd-1">
+						<img class="future-img f-img2" src="../img/weather/{{w2}}.png" alt=""/>
+					</span>
+				</div>
+				<div class="col">
+					<span class="cd-1 future-text" ng-bind="textDay1"></span>
+					<span class="cd-1 future-text" ng-bind="textDay2"></span>
+				</div>
+				<div class="col">
+					<label class="cd-1 f-weather" for=""><span ng-bind="low1"></span>~<span ng-bind="high1"></span>&#176;C</label>
+					<label class="cd-1 f-weather" for=""><span ng-bind="low2"></span>~<span ng-bind="high2"></span>&#176;C</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="contact-bar">
+	</div>
+	<div class="askLocation" style="display:none;">
+		<input class="where" type="text" placeholder='输入地址'>
+		<ul class="for-location">
+		</ul>		
+	</div>
+	<div class="location">
+		<span class="location-content" ng-bind="city"></span>
+		<span class='degree'><span ng-bind="temperature"></span>&#176;C</span>
+	</div>
+</div>
+
+<div class="content-container">
+	<div class="data-container">
+		<div class="data-box">
+			<div class="data-text">
+				<div class="inside-text">
+					<div class="tab">
+						<div class="text"><span class="text-info" ng-bind="humidity"></span>&nbsp;<sup class="percent">%</sup></div>
+					</div>
+					<div class="text-detail">1230/2000 pts</div>
+				</div>
+			</div>
+			<div class="leftProgress"></div>
+			<div class="rightProgress"></div>
+			<div class="wrapper w-left">
+				<div class="rotate leftRotate"></div>
+			</div>
+			<div class="wrapper w-right">
+				<div class="rotate rightRotate"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="sticker-container">
+		<div class="sticker">
+			<div class="highlighter"></div>
+		</div>
+		<div class="highlight-box">
+			<ul>
+				<div class="highlight-time">6:00 am</div>
+				<li>Ran for 10mins</li>
+				<li>530 pts</li>
+				<li>1035 steps</li>
+			</ul>
+		</div>
+	</div>
+
+</div>
+
+</body>
+<script src="dist/js/weather.js"></script>
+<script src='dist/js/home.js'></script>
+</html>
